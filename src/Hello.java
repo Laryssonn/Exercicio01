@@ -1,6 +1,6 @@
 
 public class Hello {
-
+	
 	public static void main(String[] args) {
 		exibirNumerosPrimos();
 	}
@@ -15,7 +15,8 @@ public class Hello {
 		}
 
 	}
-	public static void exibirNumerosParesImpares(){
+
+	public static void exibirNumerosParesImpares() {
 		for (int x = 1; x <= 100; x++) {
 			if (x % 2 == 0) {
 				par(x);
@@ -25,24 +26,23 @@ public class Hello {
 
 		}
 	}
-	public static void exibirNumerosPrimos(){
-		int c =0;
-		for(int x = 0;x <= 100;x++){
+
+	public static void exibirNumerosPrimos() {
+		int c = 0;
+		for (int x = 0; x <= 100; x++) {
 			int aux = x;
-        	while(aux > 0){
-           	 if(x % aux ==0 ){
-           		 c++;
-           	 }
-           	
-           	 aux--;
-             }
-        	 if(c == 2){
-        		System.out.println(x);
-        	    c=0;
-        	    
-       	     }else{
-       	    	 c=0;
-       	     }
+			while (aux > 0 && c < 3) {
+				if (x % aux == 0) {
+					c++;
+				}
+				
+				aux--;
+			}
+			
+			if (c == 2) {
+				System.out.println(x);
+			}
+			c = 0;
 		}
 	}
 
